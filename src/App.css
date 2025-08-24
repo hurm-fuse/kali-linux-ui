@@ -1,0 +1,221 @@
+/* Background */
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background-image: url("/kali-linux.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: white;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #1e202d;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 14px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
+  z-index: 1000;
+}
+
+/* Left Section */
+.left-section {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.logo {
+  height: 26px;
+  cursor: pointer;
+}
+
+/* Shortcuts */
+.shortcuts {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.shortcuts img {
+  width: 22px;
+  height: 22px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+/* Divider lines */
+.firsthr,
+.sechr {
+  width: 1px;
+  height: 28px;
+  background: rgba(255, 255, 255, 0.3);
+  border: none;
+}
+
+.workspaces {
+  display: flex;
+  gap: 16px;
+}
+
+.workspaces h3 {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 400;
+  padding: 4px 0;
+  cursor: pointer;
+  position: relative;
+  color: #ccc;
+}
+
+/* underline style */
+.workspaces h3::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px; /* neeche line */
+  width: 100%;
+  height: 2px;
+  background: #268bd2; /* blue underline */
+  opacity: 0;
+  transform: scaleX(0);
+  transition: all 0.2s ease-in-out;
+}
+
+/* hover effect */
+.workspaces h3:hover {
+  color: white;
+}
+
+.workspaces h3:hover::after {
+  opacity: 1;
+  transform: scaleX(3);
+}
+
+/* Right Section */
+.right-section {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 14px;
+}
+
+.scale img {
+  width: 50px;
+}
+
+/* Fake monitor usage widget */
+.monitor {
+  width: 50px;
+  height: 18px;
+  background: linear-gradient(to top, #268bd2 35%, #1e202d 35%);
+  border: 1px solid #555;
+  border-radius: 3px;
+}
+
+/* Clock */
+.clock {
+  font-weight: bold;
+}
+
+.picon {
+  display: flex;
+  align-items: center;   /* vertical center */
+  justify-content: center; /* horizontal center */
+  width: 20px;   /* thoda fixed space de */
+}
+
+.picon img {
+  width: 15px;
+  height: auto;
+}
+
+/* Existing styles ... */
+
+/* Volume Popup */
+.volume-popup {
+  display: none;
+  position: absolute;
+  top: 30px;
+  right: 0;
+  width: 120px;
+  background: #2c2f42;
+  padding: 8px;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.7);
+  z-index: 2000;
+  font-size: 13px;
+  color: white;
+}
+
+.picon.white:hover .volume-popup {
+  display: block;
+}
+
+.volume-popup input[type=range] {
+  width: 100%;
+}
+
+/* Notifications */
+.notification-popup {
+  position: absolute;
+  top: 30px;
+  right: 0;
+  background: #2c2f42;
+  padding: 8px 12px;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.7);
+  color: white;
+  font-size: 13px;
+  z-index: 2000;
+  max-height: 120px;
+  overflow-y: auto;
+}
+
+.notification-popup p {
+  margin: 0;
+  padding: 4px 0;
+  cursor: default;
+}
+
+.notification-popup p:hover {
+  background: #3a3e5b;
+}
+
+/* User Menu Popup */
+.user-popup {
+  position: absolute;
+  top: 30px;
+  right: 0;
+  background: #2c2f42;
+  padding: 10px 14px;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.7);
+  color: white;
+  font-size: 13px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  z-index: 2000;
+}
+
+.user-popup p {
+  margin: 0;
+  cursor: pointer;
+}
+
+.user-popup p:hover {
+  color: #268bd2;
+}
+
+/* Hide scrollbar in volume popup */
+.notification-popup::-webkit-scrollbar {
+  display: none;
+}

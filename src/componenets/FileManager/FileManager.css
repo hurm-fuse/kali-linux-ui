@@ -1,0 +1,156 @@
+.filemanager-window {
+  position: absolute;
+  top: 60px;
+  left: 80px;
+  width: 800px;
+  height: 500px;
+  background: #2b2b2b;
+  color: white;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.6);
+  z-index: 9999;
+}
+
+/* Maximize */
+.filemanager-window.maximized {
+  top: 40px !important;
+  left: 0 !important;
+  width: 99.9vw !important;
+  height: 94.9vh !important;
+  border-radius: 0 !important;
+}
+
+.titlebar {
+  background: #22252d;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px 10px;
+  cursor: move;
+}
+
+.titlebar span {
+  font-size: 14px;
+}
+
+.titlebar-buttons {
+  display: flex;
+  gap: 6px;
+}
+
+.titlebar-buttons button {
+  width: 28px;
+  height: 22px;
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.titlebar-buttons button:hover {
+  background: #444;
+  border-radius: 3px;
+}
+
+.terminal-menubar {
+  background: #22252d;
+  padding: 4px 10px;
+  display: flex;
+  gap: 15px;
+  font-size: 13px;
+}
+
+.toolbar {
+  background: #22252d;
+  padding: 6px;
+  display: flex;
+  gap: 8px;
+}
+
+.toolbar input {
+  flex: 1;
+  background: #272a34;
+  border: 1px #000 solid;
+  color: white;
+  padding: 4px;
+}
+
+.content {
+  flex: 1;
+  display: flex;
+  overflow: hidden;
+}
+
+.sidebar {
+  width: 180px;
+  background: #272a34;
+  padding: 10px;
+  font-size: 13px;
+  border: 1px #000 solid;
+}
+
+.sidebar h4 {
+  margin: 12px 0 6px;
+  font-size: 11px;
+  color: #ffffff;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar li {
+  padding: 4px 6px;
+  cursor: pointer;
+}
+
+.sidebar li:hover {
+  background: #2879fc;
+  border-radius: 3px;
+}
+
+.main-panel {
+  flex: 1;
+  background: #272a34;
+  padding: 15px;
+  overflow: auto;
+  border: 1px #000 solid;
+}
+
+.folder-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 90px);
+  gap: 25px;
+  justify-content: flex-start;
+}
+
+.folder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 12px;
+  color: white;
+}
+
+.folder img {
+  width: 48px;
+  height: 48px;
+}
+
+.filemanager-minimized {
+  position: fixed;
+  bottom: 8px;
+  left: 8px;
+  background: #222;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.5);
+}

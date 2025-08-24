@@ -1,0 +1,197 @@
+.applications-menu {
+    position: absolute;
+    top: 41px;
+    width: 500px;
+    height: 500px;
+    background: #22252e; /* Darker background */
+    border: 1px solid #202020;
+    padding: 10px;
+    box-shadow: 0 4px 25px rgba(0, 0, 0, 0.8);
+    display: flex;
+    flex-direction: column;
+    font-family: "Segoe UI", sans-serif;
+    font-size: 14px;
+    color: #ddd; /* Light gray like Kali */
+    z-index: 1000;
+}
+
+/* 🔍 Search bar */
+.search-bar {
+    display: flex;
+    align-items: center;
+    background: #1c1f26;
+    border: 1px solid #222;
+    border-radius: 50px;
+    padding: 5px 10px;
+    transition: all 0.3s ease;
+}
+
+.search-bar input {
+    flex: 1;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #eee;
+    font-size: 14px;
+    margin-left: 8px;
+}
+
+.search-bar img {
+    width: 18px;
+    height: 18px;
+    opacity: 0.6;
+    transition: opacity 0.3s ease;
+}
+
+/* Hover highlight - neon blue */
+.search-bar:hover {
+    border: 1px solid #008cff;
+}
+
+.search-bar:hover img {
+    opacity: 1;
+}
+
+/* 📂 Menu Content */
+.menu-content {
+    display: flex;
+    flex: 1;
+    overflow: hidden;
+    margin-top: 6px;
+}
+
+/* Left Categories */
+.categories {
+    width: 40%;
+    background: #22252e;
+    border-right: 1px solid #222;
+    overflow-y: auto;
+}
+
+.categories ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.categories li {
+    display: flex;
+    align-items: center;
+    padding: 8px 12px;
+    width: 165px;
+    cursor: pointer;
+    color: #ccc;
+}
+
+.categories li img {
+    width: 18px;
+    height: 18px;
+    margin-right: 8px;
+}
+
+/* Highlight on hover (Kali style) */
+.categories li:hover {
+    background: #1c1f26;
+}
+
+/* Scrollbar remove */
+.applications-menu ::-webkit-scrollbar {
+    display: none;
+}
+
+/* Right Applications */
+.applications-list {
+    flex: 1;
+    padding: 10px;
+    overflow-y: auto;
+    background: #1c1f26;
+    border-radius: 5px;
+}
+
+.applications-list ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.applications-list li {
+    display: flex;
+    align-items: center;
+    padding: 6px 10px;
+    cursor: pointer;
+    color: #ddd;
+    border-radius: 4px;
+    transition: background 0.2s, color 0.2s;
+}
+
+.applications-list li img {
+    width: 18px;
+    height: 18px;
+    margin-right: 8px;
+}
+
+/* Neon blue hover like Kali */
+.applications-list li:hover {
+    background: rgba(0, 140, 255, 0.18);
+    color: #00aaff;
+}
+
+/* 🔵 Bottom bar */
+.bottom-bar {
+    display: flex;
+    align-items: center;          /* vertical center */
+    justify-content: space-between;
+    background: #22252e;
+    border-top: 1px solid #222;
+    padding: 0 12px;
+    height: 40px;                 /* fix height */
+}
+
+/* Left side (logo + text) */
+.bottom-bar .flex {
+    display: flex;
+    align-items: center;          /* center align text + logo */
+    gap: 8px;
+}
+
+.bottom-icon {
+    width: 40px;
+    height: 40px;
+    margin-left: -13px;
+    margin-top: 10px;
+}
+
+.bottom-bar h3 {
+    color: #ddd;
+    font-size: 20px;
+    font-weight: 600;
+    margin-top: 5px;
+    display: flex;
+    align-items: center;
+}
+
+/* Right side (icons) */
+.bottom-actions {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.bottom-actions img {
+    width: 20px;
+    margin-top: 10px;
+    height: 20px;
+    cursor: pointer;
+    opacity: 0.7;
+    transition: opacity 0.2s ease, filter 0.2s ease;
+}
+
+.bottom-actions img:hover {
+    opacity: 1;
+    filter: drop-shadow(0 0 4px #00aaff);
+}
+
+.flex {
+    display: flex;
+    gap: 5px;
+}

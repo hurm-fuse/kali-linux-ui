@@ -1,0 +1,179 @@
+/* ==========================
+   Root Terminal Emulator Window
+   ========================== */
+.root-terminal-window {
+  position: absolute;
+  top: 60px;
+  left: 60px;
+  width: 700px;
+  height: 450px;
+  background: #1a1a1a;
+  border: 1px solid #333;
+  border-radius: 8px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.7);
+  display: flex;
+  flex-direction: column;
+  font-family: monospace, sans-serif;
+  color: #eee;
+  overflow: hidden;
+  z-index: 9999;
+}
+
+/* Maximize */
+.root-terminal-window.maximized {
+  top: 40px !important;
+  left: 0 !important;
+  width: 99.8vw !important;
+  height: 94.6vh !important;
+  border-radius: 0 !important;
+}
+
+/* ==========================
+   Titlebar
+   ========================== */
+.titlebar {
+  height: 32px;
+  background: linear-gradient(to bottom, #2c2c2c, #1a1a1a);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 8px;
+  cursor: grab;
+  user-select: none;
+}
+
+.titlebar span {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #ddd;
+  font-size: 14px;
+}
+
+/* Titlebar Buttons */
+.titlebar-buttons {
+  display: flex;
+  gap: 6px;
+}
+
+.titlebar-buttons button {
+  width: 20px;
+  height: 20px;
+  border: none;
+  border-radius: 4px;
+  font-size: 12px;
+  cursor: pointer;
+  background: #444;
+  color: #eee;
+  transition: 0.2s;
+}
+
+.titlebar-buttons button:hover {
+  background: #666;
+}
+
+.titlebar-buttons button:last-child:hover {
+  background: #e74c3c;
+  color: #fff;
+}
+
+/* ==========================
+   Menu Bar
+   ========================== */
+.terminal-menubar {
+  height: 28px;
+  background: #252525;
+  display: flex;
+  align-items: center;
+  padding: 0 12px;
+  gap: 20px;
+  border-bottom: 1px solid #333;
+}
+
+.terminal-menubar span {
+  font-size: 13px;
+  color: #bbb;
+  cursor: pointer;
+}
+
+.terminal-menubar span:hover {
+  color: #fff;
+}
+
+/* ==========================
+   Terminal Body
+   ========================== */
+.terminal-body {
+  flex: 1;
+  padding: 10px;
+  overflow-y: auto;
+  background: #111;
+  font-size: 14px;
+  line-height: 1.4em;
+  scrollbar-width: thin;
+  scrollbar-color: #555 #111;
+}
+
+/* Scrollbar for Webkit */
+.terminal-body::-webkit-scrollbar {
+  width: 8px;
+}
+.terminal-body::-webkit-scrollbar-track {
+  background: #111;
+}
+.terminal-body::-webkit-scrollbar-thumb {
+  background: #555;
+  border-radius: 4px;
+}
+
+/* ==========================
+   Input Line
+   ========================== */
+.input-line {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.input-line input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #0f0;
+  font-family: monospace;
+  font-size: 14px;
+}
+
+/* ==========================
+   Text Colors
+   ========================== */
+.user.root {
+  color: #f33;
+  font-weight: bold;
+}
+
+.path {
+  color: #0ff;
+}
+
+.output {
+  margin-left: 20px;
+  color: #bbb;
+}
+
+/* ==========================
+   Minimized Window
+   ========================== */
+.root-terminal-minimized {
+  position: fixed;
+  bottom: 10px;
+  left: 10px;
+  background: #2c2c2c;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  color: #eee;
+}
