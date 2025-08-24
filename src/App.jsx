@@ -9,10 +9,10 @@ import muteIcon from "./assets/mute.png";
 import user from "./assets/user.svg";
 import bell from "./assets/bell.svg";
 
-import ApplicationsMenu from "./componenets/ApplicationsMenu";
-import TerminalEmulator from "./componenets/Terminal-Emulator/Terminal-Emulator";
-import RootTerminalEmulator from "./componenets/Root-Terminal-Emulator/Root-Terminal-Emulator";
-import FileManager from "./componenets/FileManager/FileManager";
+import ApplicationsMenu from "./components/ApplicationsMenu";
+import TerminalEmulator from "./components/Terminal-Emulator/Terminal-Emulator";
+import RootTerminalEmulator from "./components/Root-Terminal-Emulator/Root-Terminal-Emulator";
+import FileManager from "./components/FileManager/FileManager";
 import "./App.css";
 
 function App() {
