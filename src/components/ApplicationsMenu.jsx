@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "./ApplicationsMenu.css";
-import kalilogo from "../assets/kali-dragon-icon.svg";
+import kalilogo from "../assets/Kali-dragon-icon.svg"
 import LogoutDialog from "./LogoutDialog/LogoutDialog";
 import one from "../assets/1.png";
 import two from "../assets/2.png";
